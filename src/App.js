@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import DynamicForm from "./component/DynamicForm";
 
-function App() {
+
+const data = [
+  // { id: 'name', label: 'Name', value: '' },
+  // { id: 'email', label: 'Email', value: '' },
+  // { id: 'password', label: 'Password', value: '' },
+  // { id: 'phoneno', label: 'Phoneno', value: '' },
+  // { id: 'adress', label: 'adress', value: '' },
+  // { id: 'fathername', label: 'fathername', value: '' },
+  {
+    fieldName: "textfield",
+  },
+  {
+    fieldName: "checkbox",
+  },
+  {
+    fieldName: "select",
+  },
+];
+
+const App = (props) => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DynamicForm data={data} />
     </div>
   );
-}
+};
 
 export default App;
